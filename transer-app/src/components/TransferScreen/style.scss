@@ -1,0 +1,19 @@
+@import "../../styles/theme.scss";
+
+.transfer-screen {
+  @extend %expando-content;
+}
+
+.transfer__section {
+  margin-left: $spacing-4xl;
+  margin-top: $spacing-xs;
+  width: 50%;
+}
+
+.transfer__title {
+  margin-bottom: $spacing-xs;
+}
+
+.transfer__p {
+  color: red;
+}

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="userID" />
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="userID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="accountID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="accountName" Type="nvarchar" MaxLength="200" />
+    <Property Name="balance" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="createDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="transactionID" />
+    </Key>
+    <Property Name="transactionID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="10" />
+    <Property Name="fromUserID" Type="varchar" MaxLength="10" />
+    <Property Name="toAccID" Type="varchar" MaxLength="10" />
+    <Property Name="amout" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="createDate" Type="smalldatetime" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="200" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="mainbalance" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="createDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityContainer Name="BankModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

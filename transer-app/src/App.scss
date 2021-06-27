@@ -1,0 +1,6 @@
+@import "./styles/theme.scss";
+
+.content{
+  @extend %expando-container;
+  height: 100%;
+}

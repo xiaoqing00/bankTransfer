@@ -1,0 +1,25 @@
+
+@import "./spacings.scss";
+@import "./colors.scss";
+
+// Bootstrap and its default variables
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+
+
+html, body {
+  height: 100%;
+}
+
+#root, .App {
+  height: 100vh;
+}
+
+%expando-container {
+  display: flex;
+  flex-direction: column;
+}
+
+%expando-content {
+  flex: 1 0 auto;
+}

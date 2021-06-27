@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BankModelStoreContainer" CdmEntityContainer="BankEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="BankModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="accountName" ColumnName="accountName" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="BankModel.Transaction">
+        <MappingFragment StoreEntitySet="Transaction">
+          <ScalarProperty Name="transactionID" ColumnName="transactionID" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="fromUserID" ColumnName="fromUserID" />
+          <ScalarProperty Name="toAccID" ColumnName="toAccID" />
+          <ScalarProperty Name="amout" ColumnName="amout" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BankModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="mainbalance" ColumnName="mainbalance" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

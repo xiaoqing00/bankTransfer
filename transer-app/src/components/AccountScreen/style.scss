@@ -1,0 +1,15 @@
+@import "../../styles/theme.scss";
+
+.account-screen {
+  @extend %expando-content;
+}
+
+.account__section {
+  margin-left: $spacing-4xl;
+  margin-top: $spacing-xs;
+  width: 50%;
+}
+
+.account__title {
+  margin-bottom: $spacing-xs;
+}

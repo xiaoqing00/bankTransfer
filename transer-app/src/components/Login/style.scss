@@ -1,0 +1,15 @@
+@import "../../styles/theme.scss";
+
+.sign-in-screen {
+  @extend %expando-content;
+}
+
+.sign-in__section {
+  margin-left: $spacing-4xl;
+  margin-top: $spacing-xs;
+  width: 50%;
+}
+
+.sign-in__title {
+  margin-bottom: $spacing-xs;
+}
