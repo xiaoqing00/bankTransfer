@@ -6,6 +6,7 @@ import axios from 'axios';
 import './style.scss';
 import { Link } from 'react-router-dom';
 import { IUser } from '../Login';
+import TransactionComponent from '../TransactionSegment';
 
 export interface IAccount {
   userID: string;
@@ -98,6 +99,7 @@ const handleSubmit = async(event)=>{
             </li>
           ))}
         </ul>
+        <TransactionComponent />
       <Form
         noValidate 
         onSubmit={handleSubmit}

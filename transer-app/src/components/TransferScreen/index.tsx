@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './style.scss';
 import { IAccount } from '../AccountScreen';
+import TransactionComponent from '../TransactionSegment';
 
 const TransferScreen = () => {
 
@@ -139,6 +140,7 @@ const TransferScreen = () => {
             </Col>            
         </Row>
       </Form>
+      <TransactionComponent />
          </div>
          </div>
          </>

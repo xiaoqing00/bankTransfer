@@ -26,18 +26,32 @@ namespace TranserApi.Controllers
         }
 
         // GET: api/Transactions/5
+        //[ResponseType(typeof(Transaction))]
+        //public async Task<IHttpActionResult> GetTransaction(string id)
+        //{
+        //    Transaction transaction = await db.Transactions.FindAsync(id);
+        //    if (transaction == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(transaction);
+        //}
+
+        [HttpGet]
+        [Route("api/transactions/{fromUserID}")]
         [ResponseType(typeof(Transaction))]
-        public async Task<IHttpActionResult> GetTransaction(string id)
+        public IHttpActionResult GetTransaction(string fromUserID)
         {
-            Transaction transaction = await db.Transactions.FindAsync(id);
-            if (transaction == null)
+            List<Transaction> transactionList = db.Transactions.Where(a => a.fromUserID == fromUserID).ToList();
+
+            if (transactionList == null)
             {
                 return NotFound();
             }
 
-            return Ok(transaction);
+            return Ok(transactionList);
         }
-
         // PUT: api/Transactions/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutTransaction(string id, Transaction transaction)

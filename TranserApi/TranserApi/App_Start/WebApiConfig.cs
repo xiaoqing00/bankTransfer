@@ -17,6 +17,7 @@ namespace TranserApi
             // Web API configuration and services
             config.Formatters.JsonFormatter.SupportedMediaTypes
     .Add(new MediaTypeHeaderValue("text/html"));
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -25,6 +26,11 @@ namespace TranserApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+       name: "1",
+       routeTemplate: "api/{controller}/{action}/{id}",
+       defaults: null
+   );
         }
     }
 }

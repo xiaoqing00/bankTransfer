@@ -57,7 +57,9 @@ E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\Microsoft.
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\Microsoft.Web.Infrastructure.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\Newtonsoft.Json.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Net.Http.Formatting.dll
+E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Cors.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Helpers.dll
+E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Http.Cors.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Http.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Http.WebHost.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Mvc.dll
@@ -69,6 +71,7 @@ E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\WebGrease.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\EntityFramework.xml
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\EntityFramework.SqlServer.xml
+E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Http.Cors.xml
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\Newtonsoft.Json.xml
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Net.Http.Formatting.xml
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Helpers.xml
@@ -86,7 +89,3 @@ E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\Tran
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.csproj.CopyComplete
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.pdb
-E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Cors.dll
-E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Http.Cors.dll
-E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\bin\System.Web.Http.Cors.xml
-E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.csprojAssemblyReference.cache
