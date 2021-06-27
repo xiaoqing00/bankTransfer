@@ -140,7 +140,7 @@ const TransferScreen = () => {
             </Col>            
         </Row>
       </Form>
-      <TransactionComponent />
+      <TransactionComponent refresh={refreshKey}/>
          </div>
          </div>
          </>

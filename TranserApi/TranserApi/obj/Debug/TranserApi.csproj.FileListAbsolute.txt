@@ -89,3 +89,4 @@ E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\Tran
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.csproj.CopyComplete
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.dll
 E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.pdb
+E:\interview\ocbc\bankTransfer\bankTransfer\TranserApi\TranserApi\obj\Debug\TranserApi.csprojAssemblyReference.cache

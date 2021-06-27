@@ -15,10 +15,9 @@ export interface ITransaction {
   status: string
 }
 
-const TransactionComponent = () =>{
+const TransactionComponent = ({refresh}: any) =>{
   const {user} = useContext(LoginContext);
   const [transactions, setTransactions] = useState<ITransaction[]>([]);
-
 
   const fetchData = async () => {
     const transactions = await axios.get(`http://localhost:56785/api/transactions/${user?.userID}`
@@ -30,8 +29,10 @@ const TransactionComponent = () =>{
   }
   useEffect(() => { 
     fetchData();
-    }, []);
+    }, [refresh]);
   return (
+    <>
+    <p>Transaction History</p>
 <ul className="transactions">
           {transactions && transactions.map((a) => (
             <li key={a.transactionID}>
@@ -39,6 +40,7 @@ const TransactionComponent = () =>{
             </li>
           ))}
         </ul>
+        </>
   );
 };
 

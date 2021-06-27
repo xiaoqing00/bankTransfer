@@ -150,27 +150,19 @@ namespace TranserApi.Controllers
                         newAcc.userID = user.userID;
                         newAcc.accountID = transaction.toAccID;
                         newAcc.accountName = transaction.toAccID;
-                        newAcc.balance = 0 - transaction.amout;
+                        newAcc.balance = user.mainbalance - transaction.amout;
                         newAcc.createDate = DateTime.Now;
                         db.Accounts.Add(newAcc);
+                        user.mainbalance = 0;
                     }
                     else
                     {
                         // update account balance
                         foreach (Account acc in accountList)
                         { 
-                        acc.balance -= transaction.amout;
-                            //Transaction t = new Transaction();
-                            //Random generator = new Random();
-                            //t.transactionID = generator.Next(0, 1000000).ToString("D10");
-                            //t.type = "transfer";
-                            //t.fromUserID = acc.userID;
-                            //t.toAccID = acc.accountID;
-                            //t.toAccID = acc.accountName;
-                            //t.amout = transaction.amout;
-                            //t.createDate = DateTime.Now;
-                            //t.status = acc.balance.ToString();
-                            //db.Transactions.Add(t);
+                        acc.balance += transaction.amout;
+                            user.mainbalance = (user.mainbalance - transaction.amout) <= 0 ? 0 : user.mainbalance - transaction.amout;
+
                         }
                     }
                 }               

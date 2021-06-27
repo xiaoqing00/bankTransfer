@@ -23,17 +23,33 @@ namespace TranserApi.Controllers
             return db.Accounts;
         }
 
+        //// GET: api/Accounts/5
+        //[ResponseType(typeof(Account))]
+        //public async Task<IHttpActionResult> GetAccount(string id)
+        //{
+        //    Account account = await db.Accounts.FindAsync(id);
+        //    if (account == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(account);
+        //}
+
         // GET: api/Accounts/5
+        [HttpGet]
+        [Route("api/accounts/{userID}")]
         [ResponseType(typeof(Account))]
-        public async Task<IHttpActionResult> GetAccount(string id)
+        public IHttpActionResult GetAccount(string userID)
         {
-            Account account = await db.Accounts.FindAsync(id);
-            if (account == null)
+            List<Account> accountList = db.Accounts.Where(a => a.userID == userID || a.accountID == userID).OrderBy(a=>a.userID).ToList();
+            
+            if (accountList == null)
             {
                 return NotFound();
             }
 
-            return Ok(account);
+            return Ok(accountList);
         }
 
         // PUT: api/Accounts/5

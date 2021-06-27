@@ -20,7 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noImplicitAny": false,
-    "proxy": "https://localhost:56785"
   },
   "include": [
     "src"

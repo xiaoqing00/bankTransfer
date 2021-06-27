@@ -35,7 +35,7 @@ const fetchData = async () => {
     setUser(userUpdate.data);
     console.log(userUpdate.data);
   }
-  const response = await axios.get(`http://localhost:56785/api/accounts`,{
+  const response = await axios.get(`http://localhost:56785/api/accounts/${user?.userID}`,{
           headers: {
             'Content-Type': 'application/json',
           }
@@ -94,12 +94,21 @@ const handleSubmit = async(event)=>{
       </Row> 
       <ul className="accounts">
           {account && account.map((a) => (
+            (a.userID === user?.userID) &&
             <li key={a.accountID}>
-              <p>{a.userID} {a.balance} to {a.accountID}</p>
+              <p>{a.userID} Owing {a.balance} to {a.accountID}</p>
             </li>
           ))}
         </ul>
-        <TransactionComponent />
+        <ul className="accounts">
+          {account && account.map((a) => (
+            (a.accountID === user?.userID) &&
+            <li key={a.accountID}>
+              <p>{a.accountID} Owing  {a.balance} from {a.userID}. </p>
+            </li>
+          ))}
+        </ul>
+        <TransactionComponent refresh={refreshKey} />
       <Form
         noValidate 
         onSubmit={handleSubmit}
