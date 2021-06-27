@@ -1,16 +1,16 @@
 import React from 'react';
 import { RenderResult, render } from '@testing-library/react';
-import AccountScreen from '.';
+import Header from '.';
 
 describe('Account Screen', () => {
     let component: RenderResult;
   
     beforeEach(() => {
-      component = render(<AccountScreen />);
+      component = render(<Header />);
     });
   
-    it('has a top up', () => {
-      expect(component.getAllByText('Top Up')).toBeInTheDocument();
-    });
+    it('has a title', () => {
+        expect(component.getByText('Bank of ABC')).toBeInTheDocument();
+      });
   
   });

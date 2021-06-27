@@ -21,10 +21,12 @@ setScreen}}
       <div className="content">
       <Header />
       <Hero />
+      <Route>
         <Switch>
           {/* <Route exact path="/" component = {MainSegment} /> */}
           <Route exact path="/" component = {LoginSegment} />
         </Switch>
+      </Route>
       </div>
       </LoginContext.Provider>
       </ScreenContext.Provider>

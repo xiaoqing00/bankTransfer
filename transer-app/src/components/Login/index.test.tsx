@@ -1,16 +1,17 @@
 import React from 'react';
 import { RenderResult, render } from '@testing-library/react';
-import AccountScreen from '.';
+import Login from '.';
+
 
 describe('Account Screen', () => {
     let component: RenderResult;
   
     beforeEach(() => {
-      component = render(<AccountScreen />);
+      component = render(<Login />);
     });
   
     it('has a top up', () => {
-      expect(component.getAllByText('Top Up')).toBeInTheDocument();
+      expect(component.getByText('Welcome to ePay')).toBeInTheDocument();
     });
   
   });
