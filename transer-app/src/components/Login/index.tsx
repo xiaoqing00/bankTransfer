@@ -11,7 +11,7 @@ export interface IUser {
   name: string;
   userID: string;
   status: string;
-  mainbalance: DoubleRange;
+  mainbalance: number;
   createDate: Date;
 }
 
@@ -25,7 +25,7 @@ const Login = () => {
   const handleSubmit = async(event)=>{
   event.preventDefault();
   event.stopPropagation();
-  setUsername(username?.trim());
+  setUsername(username?.trim().toLowerCase());
 
   try{
   var response= await axios.get("http://localhost:56785/api/users/"+username);
@@ -60,7 +60,7 @@ const Login = () => {
   };
 
   const handleOnChange =({target: {value}})=>{
-    setUsername(value?.trim());
+    setUsername(value?.trim().toLowerCase());
   };
 
  return (
